@@ -55,6 +55,8 @@ test("disabled browser storage reports failure instead of claiming a report was 
       exact: true,
     }).click();
   }
-  await expect(page.getByRole("alert")).toBeVisible();
+  const storageAlert = page.locator("main").getByRole("alert");
+  await expect(storageAlert).toBeVisible();
+  await expect(storageAlert).toContainText("未能保存到此浏览器");
   await expect(page).toHaveURL(/\/next-agent\/quiz\/$/);
 });

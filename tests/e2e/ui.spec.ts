@@ -55,7 +55,7 @@ test("mobile player can answer, refresh, download and save local tryout feedback
   await expect(enjoyment).toHaveValue("4");
   await expect(burden).toHaveValue("2");
   await expect(page.getByRole("textbox", { name: /一句话感受/ })).toHaveValue(note);
-  await expect(page.getByText(note, { exact: true })).toBeVisible();
+  await expect(page.locator(".feedback-history").getByText(note, { exact: true })).toBeVisible();
   await expectNoHorizontalOverflow(page);
 
   await page.goto(reportURL);
