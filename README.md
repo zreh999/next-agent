@@ -6,7 +6,7 @@
 
 **这是玩法偏好探索工具。结果不是科学人格测量、能力评估、竞技表现预测，也不是官方选角建议。**
 
-部署目标：[https://zreh999.github.io/next-agent/](https://zreh999.github.io/next-agent/)。实际发布状态以仓库 Actions 中的部署结果及公网访问检查为准。
+在线体验：[本命回响 · Agent Resonance](https://zreh999.github.io/next-agent/)。已于 2026-11-11 完成 GitHub Pages 发布；发布者确认任务成功且公网首页正常打开。检查范围见 [验证记录](docs/verification.md)。
 
 ## 项目封面与界面
 
