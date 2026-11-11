@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+datasource db {
+  provider = "postgresql"
+}
+model Assessment {
+  id         String   @id
+  ownerHash  String
+  inputJson  String
+  reportJson String
+  createdAt  DateTime @default(now())
+  feedback   Feedback[]
+  shares     Share[]
+  @@index([ownerHash])
+}
+model Feedback {
+  id           String     @id
+  assessmentId String
+  agentId      String
+  round        Int
+  payloadJson  String
+  createdAt    DateTime   @default(now())
+  assessment   Assessment @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  @@unique([assessmentId, agentId, round])
+}
+model Share {
+  id           String     @id
+  assessmentId String
+  snapshotJson String
+  createdAt    DateTime   @default(now())
+  revokedAt    DateTime?
+  assessment   Assessment @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  @@index([assessmentId])
+}

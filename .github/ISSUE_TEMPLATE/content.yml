@@ -1,0 +1,48 @@
+name: 题目与推荐内容
+description: 建议修改题目、角色画像、排序规则、解释或试玩任务
+title: "[Content] "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 内容类型
+      options:
+        - 题目或选项
+        - 特工玩法画像
+        - 权重或排序规则
+        - 解释与试玩任务
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 内容版本
+      description: 填写题库、规则或角色资料版本；不知道时写“未知”。
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 当前问题
+      description: 使用示例答案或具体情境说明哪里不合理。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议与理由
+      description: 说明预期改变什么；涉及游戏事实时附官方资料来源。
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: 修改前后样例
+      description: 说明哪些结果应该变化，哪些结果应保持稳定。
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 内容说明
+      options:
+        - label: 我没有将自述偏好描述为能力、人格诊断或竞技表现保证。
+          required: true

@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "dimensionWeights": {
+    "initiative": 1,
+    "intel": 1,
+    "setup": 1,
+    "adaptability": 1,
+    "teamwork": 1
+  },
+  "practicePenalty": 0.07,
+  "communicationPenalty": 0.04,
+  "alternativeTolerance": 0.2
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+  <title id="title">本命回响 · Agent Resonance</title><desc id="desc">项目封面：找到与你同频的特工。16段原创情境、30名完整特工、5项玩法偏好。</desc>
+  <defs><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#a5e9d8" stroke-opacity=".055"/></pattern><radialGradient id="glow"><stop stop-color="#a5e9d8" stop-opacity=".08"/><stop offset="1" stop-color="#0b1117" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1440" height="720" fill="#0b1117"/><rect width="1440" height="720" fill="url(#grid)"/><circle cx="1100" cy="350" r="330" fill="url(#glow)"/>
+  <g font-family="Segoe UI,Microsoft YaHei,sans-serif"><path d="M76 108 89 79h8l-13 29Zm15 0 13-29h8l-13 29Zm15 0 8-17h8l-8 17Z" fill="#ff6470"/><text x="145" y="102" fill="#a5e9d8" font-size="20" letter-spacing="5">AGENT RESONANCE</text>
+  <text x="76" y="297" fill="#eef0e9" font-size="100" font-weight="700">本命回响</text><text x="79" y="385" fill="#ff6470" font-size="42">找到与你同频的特工</text><text x="80" y="449" fill="#9bafb9" font-size="23">每个选择，都有自己的频率。</text>
+  <g fill="#b9c8cc" font-size="21"><text x="80" y="606">16 段原创情境</text><text x="307" y="606">30 名完整特工</text><text x="543" y="606">05 项玩法偏好</text></g><text x="80" y="659" fill="#6f8593" font-size="14" letter-spacing="2">心理学启发 · 原创题库 · 可解释规则 / BETA 0.2</text>
+  </g><g fill="none" stroke="#a5e9d8"><circle cx="1100" cy="350" r="75" opacity=".45"/><circle cx="1100" cy="350" r="129" opacity=".25"/><circle cx="1100" cy="350" r="183" opacity=".15"/><circle cx="1100" cy="350" r="237" opacity=".08"/></g><path d="M847 350h81l25-33 30 68 46-156 45 246 39-206 34 127 25-46h139" fill="none" stroke="#ff6470" stroke-width="4" stroke-linejoin="round"/><circle cx="1100" cy="350" r="5" fill="#a5e9d8"/>
+</svg>

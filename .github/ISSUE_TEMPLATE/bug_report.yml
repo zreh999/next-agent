@@ -1,0 +1,37 @@
+name: 问题反馈
+description: 报告可复现的页面、接口、保存或分享问题
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: 请使用示例数据复现，不要提交会话 Cookie、环境变量或真实用户的私有报告。
+  - type: input
+    id: version
+    attributes:
+      label: 应用或内容版本
+      description: 写明分支、提交或页面中可见的版本；不知道时写“未知”。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 如何复现
+      description: 说明从哪个页面开始、输入或点击了什么。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期与实际行为
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: 浏览器、设备，以及本地演示或 PostgreSQL 部署。
+  - type: textarea
+    id: details
+    attributes:
+      label: 补充信息
+      description: 可附使用示例数据得到的截图或错误信息。

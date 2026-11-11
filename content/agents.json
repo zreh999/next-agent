@@ -1,0 +1,905 @@
+{
+  "version": "2.0.0",
+  "agents": [
+    {
+      "id": "astra",
+      "name": "星礈",
+      "enName": "Astra",
+      "role": "controller",
+      "tagline": "从全图预置到一次及时的星体触发",
+      "description": "星体形态允许提前安排星体，拉拽与震荡则需要结合交战时机触发。适合喜欢从全图观察队伍需求、提前准备多个支援点的玩家；画像是维护者对这类玩法的设计判断。",
+      "profile": {
+        "initiative": 0.4,
+        "intel": 0.55,
+        "setup": 1,
+        "adaptability": 0.75,
+        "teamwork": 0.95
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 3,
+      "strengths": [
+        "通过全图星体部署准备支援",
+        "用拉拽或震荡连接队友行动",
+        "为不同区域预留技能时机"
+      ],
+      "tradeoff": "进入星体形态时仍要保护本体；预置位置与触发时机需要分开管理，远处队友的需求也可能带来较高沟通负担。",
+      "tryoutTasks": [
+        "第一局前在训练环境练习从安全位置进入星体形态，放置两个不同区域的星体，再退出检查本体是否暴露。",
+        "第一局：与一名队友约好一次拉拽或震荡信号，观察自己是否喜欢等待跟进时机。",
+        "第二至三局：回合后对照一次未派上用场的星体，记录是部署位置还是触发时机需要调整。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/astra/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "breach",
+      "name": "铁臂",
+      "enName": "Breach",
+      "role": "initiator",
+      "tagline": "让穿墙技能与队友的脚步接上",
+      "description": "穿墙爆破与闪光可以影响掩体另一侧的敌人。适合愿意先确认队友位置，再围绕一个明确窗口安排跟进的玩家；重点是支援时机而非独自冲入。",
+      "profile": {
+        "initiative": 0.75,
+        "intel": 0.45,
+        "setup": 0.65,
+        "adaptability": 0.55,
+        "teamwork": 1
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "通过墙体影响难以直接接触的位置",
+        "用闪光为队友争取进入时机",
+        "把简单信号组织成连续动作"
+      ],
+      "tradeoff": "技能生效与队友跟进之间可能出现空档；需要关注施放方向、友军位置和对方是否准备好行动。",
+      "tryoutTasks": [
+        "第一局前在训练环境选一面墙，分别试用穿墙爆破和闪光，确认技能作用在墙的哪一侧。",
+        "第一局：只和一名队友约好一次闪光后的跟进信号，记录等待确认是否自然。",
+        "第二至三局：为一个常见掩体安排一次穿墙爆破，回合后检查它是否改变了队友的行进选择。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/breach/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "brimstone",
+      "name": "炼狱",
+      "enName": "Brimstone",
+      "role": "controller",
+      "tagline": "把遮蔽、推进与区域延缓排成一套方案",
+      "description": "空投支援、燃烧区域和激励信标让玩法围绕一段清楚的队伍行动展开。适合先明确进入方向、再集中安排资源的玩家。",
+      "profile": {
+        "initiative": 0.45,
+        "intel": 0.4,
+        "setup": 0.9,
+        "adaptability": 0.35,
+        "teamwork": 0.85
+      },
+      "practiceLoad": 1,
+      "communicationLoad": 2,
+      "strengths": [
+        "用预先安排的视线控制支持推进",
+        "在队友集结时提供激励信标",
+        "通过燃烧区域延缓特定路线"
+      ],
+      "tradeoff": "集中投入资源后，临时改变进攻方向可能不方便；仍需确认队友准备情况和燃烧区域是否妨碍己方路线。",
+      "tryoutTasks": [
+        "第一局：在队伍准备推进前，用简短标记说清一次遮蔽方案，观察提前安排是否符合自己的节奏。",
+        "第二局：仅在队友准备行动时放一次激励信标，记录支援位置是否方便队友使用。",
+        "第三局：给一次燃烧弹明确指定延缓目标，结束后检查是否保留了己方需要通过的路线。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/brimstone/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "chamber",
+      "name": "尚勃勒",
+      "enName": "Chamber",
+      "role": "sentinel",
+      "tagline": "用警戒装置与精确接触经营一个角度",
+      "description": "警戒陷阱提供区域预警和减速，专属手枪则强调瞄准与接触选择。适合喜欢提前守住一处区域、又愿意练习个人交战细节的玩家。",
+      "profile": {
+        "initiative": 0.55,
+        "intel": 0.65,
+        "setup": 0.8,
+        "adaptability": 0.45,
+        "teamwork": 0.35
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 1,
+      "strengths": [
+        "用警戒装置提示接近的威胁",
+        "围绕一个角度安排精确接触",
+        "将区域准备与个人瞄准结合"
+      ],
+      "tradeoff": "装置预警不能替代交战判断；专属武器的体验较依赖自己的瞄准与选位，想少练习枪械细节时可能负担偏大。",
+      "tryoutTasks": [
+        "第一局前在训练环境练习专属手枪的瞄准与切换，记录额外武器管理是否顺手。",
+        "第一局：为警戒装置选一个明确要保护的入口，触发后用一句话或标记同步方向。",
+        "第二至三局：在同一个区域比较一次主动看守和一次等待预警的体验，记录更喜欢哪种接触节奏。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/chamber/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "clove",
+      "name": "暮蝶",
+      "enName": "Clove",
+      "role": "controller",
+      "tagline": "在积极接触中保留队伍的视线支援",
+      "description": "技能将主动交战后的增益、衰弱区域与阵亡后的控烟能力放在一起。适合愿意在队伍行动中积极接触、又希望持续承担视线支援工作的玩家。",
+      "profile": {
+        "initiative": 0.65,
+        "intel": 0.35,
+        "setup": 0.55,
+        "adaptability": 0.95,
+        "teamwork": 0.7
+      },
+      "practiceLoad": 1,
+      "communicationLoad": 2,
+      "strengths": [
+        "在主动接触后利用恢复与加速窗口",
+        "以衰弱区域连接后续交战",
+        "阵亡后仍可关注队友的控烟需求"
+      ],
+      "tradeoff": "交战增益并非随时可用，也不能保证换取生存；积极接触时仍需兼顾烟雾位置与队友后续路线。",
+      "tryoutTasks": [
+        "第一局前在训练环境熟悉衰弱道具的投掷与生效位置，避免在不清楚范围时随意贴近队友使用。",
+        "第一局：若触发交战后的增益机会，先选好下一处掩体，再观察短暂增益是否让行动更顺畅。",
+        "第二至三局：如有阵亡后的施烟机会，只围绕队友一个明确需求安排烟雾，记录这种持续支援是否有参与感。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/clove/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "cypher",
+      "name": "零",
+      "enName": "Cypher",
+      "role": "sentinel",
+      "tagline": "让绊线预警与信息遮蔽形成一个观察网",
+      "description": "绊线可以限制并暴露触发者，信息牢笼则改变通过区域时的视线条件。适合喜欢先安排观察问题、再持续追踪反馈的玩家。",
+      "profile": {
+        "initiative": 0.2,
+        "intel": 1,
+        "setup": 0.95,
+        "adaptability": 0.55,
+        "teamwork": 0.6
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "用绊线为关键路线建立预警",
+        "根据装置反馈判断区域变化",
+        "用信息牢笼安排后续接触角度"
+      ],
+      "tradeoff": "布置后仍需观察是否被发现或绕过；过度依赖同一套装置位置，可能使自己的注意力固定在有限区域。",
+      "tryoutTasks": [
+        "第一局：放绊线前明确它要回答哪个入口是否有人，回合后检查反馈是否真的影响了自己的判断。",
+        "第二局：围绕一次绊线反馈使用信息牢笼，记录自己是否理解了遮蔽后仍需防守的角度。",
+        "第三局：只调整一个曾被对手处理的绊线位置，比较改动前后的观察负担。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/cypher/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "deadlock",
+      "name": "钢锁",
+      "enName": "Deadlock",
+      "role": "sentinel",
+      "tagline": "让声音触发与通道阻挡承担不同任务",
+      "description": "声响感应器会对范围内的明显声音作出反应，屏障则限制角色通过通道。适合喜欢研究一段路径何时变危险、并为队伍后续动作留出时间的玩家。",
+      "profile": {
+        "initiative": 0.25,
+        "intel": 0.65,
+        "setup": 0.95,
+        "adaptability": 0.45,
+        "teamwork": 0.75
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "针对声音活跃的区域安排感应器",
+        "用屏障改变通道的通过条件",
+        "围绕区域触发信号准备后续配合"
+      ],
+      "tradeoff": "声响感应器依赖声音，不能当作保证发现所有绕后者的监控；屏障位置也可能限制己方行动，需要先想清双方路线。",
+      "tryoutTasks": [
+        "第一局前在训练环境分别测试安静经过与制造声音，确认声响感应器的触发逻辑。",
+        "第一局：将一个感应器布在预期会发生交战的区域，触发后只记录它是否提供了可利用的时机。",
+        "第二至三局：放屏障前先检查队友通路，结束后判断它是争取了处理时间还是增加了己方绕行。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/deadlock/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "fade",
+      "name": "黑梦",
+      "enName": "Fade",
+      "role": "initiator",
+      "tagline": "把显形线索与区域束缚接成追踪行动",
+      "description": "显形实体可揭示视线内目标，束缚区域则限制对手离开。适合喜欢用一轮信息更新计划、随后与队友一起处理有限区域的玩家。",
+      "profile": {
+        "initiative": 0.6,
+        "intel": 0.95,
+        "setup": 0.65,
+        "adaptability": 0.75,
+        "teamwork": 0.85
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "以显形反馈缩小需要检查的范围",
+        "用束缚影响对手的撤离路线",
+        "将刚获得的线索转为团队跟进"
+      ],
+      "tradeoff": "显形实体可以被摧毁，没获得反馈也不等于区域安全；投掷落点、信息时效和队友跟进需要一起考虑。",
+      "tryoutTasks": [
+        "第一局前在训练环境选一个自己看得懂的显形落点，确认实体的视线会被哪些掩体遮挡。",
+        "第一局：把一次显形结果压缩成一句方向提示，观察队友能否据此减少一个需要检查的角度。",
+        "第二至三局：在队友准备好时用一次束缚限制撤离，回合后记录自己是否享受这段信息到行动的衔接。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/fade/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "gekko",
+      "name": "盖可",
+      "enName": "Gekko",
+      "role": "initiator",
+      "tagline": "在伙伴行动、目标交互和回收之间排好顺序",
+      "description": "伙伴可以致盲、震荡，也能在满足条件时执行安装或拆除；部分伙伴结束后可回收再用。适合喜欢连续管理小任务、并愿意为队友目标服务的玩家。",
+      "profile": {
+        "initiative": 0.6,
+        "intel": 0.75,
+        "setup": 0.6,
+        "adaptability": 0.85,
+        "teamwork": 0.9
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "用伙伴行动为进入区域创造线索",
+        "将目标交互与队友掩护分工",
+        "通过安全回收为后续保留资源"
+      ],
+      "tradeoff": "伙伴行动后还要判断是否值得回收；让伙伴安装或拆除也需要己方保护，不能把它视为无需关注的自动任务。",
+      "tryoutTasks": [
+        "第一局前在训练环境让致盲伙伴行动并完成一次回收，确认回收时自己的视线与位置会怎样变化。",
+        "第一局：用伙伴配合一次进入，随后只在安全条件允许时回收，记录资源管理是否分散了交战注意力。",
+        "第二至三局：如有合适目标交互机会，先与队友约好掩护方向再安排伙伴，观察分工是否比独自处理更自然。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/gekko/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "harbor",
+      "name": "海神",
+      "enName": "Harbor",
+      "role": "controller",
+      "tagline": "沿着水幕形状安排队伍移动",
+      "description": "水幕可以引导路径并在需要的位置停止，水烟还能开启抵挡子弹的护盾。适合喜欢把视线控制与队伍实际移动路线一起规划的玩家。",
+      "profile": {
+        "initiative": 0.55,
+        "intel": 0.35,
+        "setup": 0.7,
+        "adaptability": 0.8,
+        "teamwork": 0.95
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "用可引导水幕改变视线边界",
+        "围绕移动路线安排分段支援",
+        "在合适时机开启水烟护盾"
+      ],
+      "tradeoff": "水幕形状会影响双方路线，穿越减速也需要考虑；保护区域的位置与护盾开启时机需要同队友协商。",
+      "tryoutTasks": [
+        "第一局前在训练环境练习一次水幕转弯和提前停止，再沿计划路线移动检查是否顺手。",
+        "第一局：在放水幕前标记队伍准备通过的方向，结束后记录是否留下了需要额外检查的缺口。",
+        "第二至三局：围绕一次队友需要保护的交互安排水烟和护盾，观察判断开启时机是否让自己有负担。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/harbor/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "hush",
+      "name": "遐思",
+      "enName": "Hush",
+      "role": "duelist",
+      "tagline": "让可引导道具与锚点移动接成突破动作",
+      "description": "可重新引导的闪光和 Displacement 拉拽用于扰乱接触，Flow 则围绕锚点安排移动。适合愿意练习道具路径、位置变化和队友跟进衔接的玩家。",
+      "profile": {
+        "initiative": 0.9,
+        "intel": 0.35,
+        "setup": 0.5,
+        "adaptability": 0.95,
+        "teamwork": 0.6
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 2,
+      "strengths": [
+        "以可引导道具调整接触路径",
+        "围绕锚点安排悬浮与移动",
+        "用拉拽和震荡连接后续行动"
+      ],
+      "tradeoff": "引导、锚点移动和交战之间需要切换注意力；拉拽会影响范围内所有玩家，闪光也会影响看到它的队友，需要先确认站位。",
+      "tryoutTasks": [
+        "第一局前在训练环境练习预备 Displacement，再朝新的准星方向重新引导，观察最终碰撞与拉拽位置。",
+        "第一局：为一次 Flow 提前选好锚点与移动后的掩体，记录短暂悬浮和移动是否分散观察注意力。",
+        "第二至三局：与队友约一次可引导闪光后的跟进，回合后判断道具路径是否兼顾了队友视线。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/hush/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "iso",
+      "name": "壹决",
+      "enName": "Iso",
+      "role": "duelist",
+      "tagline": "围绕一次明确交战安排保护与易伤",
+      "description": "能量屏障可以向前推进并阻挡子弹，另一技能可穿墙使接触到的玩家易伤。适合喜欢提前选定交战方向、再把技能与个人接触紧密衔接的玩家。",
+      "profile": {
+        "initiative": 0.85,
+        "intel": 0.25,
+        "setup": 0.45,
+        "adaptability": 0.65,
+        "teamwork": 0.45
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "用移动屏障影响正面接触",
+        "以穿墙易伤为交战做准备",
+        "围绕短而明确的行动目标推进"
+      ],
+      "tradeoff": "屏障不能代替对侧面和后续位置的检查；易伤也可能影响队友，施放方向需要先确认。",
+      "tryoutTasks": [
+        "第一局前在训练环境跟随一次移动屏障，确认它挡住的方向以及没有覆盖的侧面。",
+        "第一局：使用穿墙易伤前检查队友位置，再与一名队友约好后续接触，记录协同是否容易。",
+        "第二至三局：为一次正面推进提前选好结束后的掩体，比较有计划进入与临场追进的负担。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/iso/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "jett",
+      "name": "捷风",
+      "enName": "Jett",
+      "role": "duelist",
+      "tagline": "用机动与短暂遮蔽寻找第一步机会",
+      "description": "上升气流与可调整方向的短暂烟雾，为改变接触位置提供了工具。适合喜欢主动尝试、快速换位并从现场反馈调整行动的玩家。",
+      "profile": {
+        "initiative": 0.95,
+        "intel": 0.25,
+        "setup": 0.15,
+        "adaptability": 0.9,
+        "teamwork": 0.45
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 2,
+      "strengths": [
+        "通过机动改变接触角度",
+        "用短暂烟雾影响局部视线",
+        "主动尝试并调整行动节奏"
+      ],
+      "tradeoff": "机动动作、视线检查与队友跟进需要连起来练；进入新位置后未必有安全落点，短暂遮蔽也不等于区域已经安全。",
+      "tryoutTasks": [
+        "第一局前在训练环境试一次上升气流后的落点，落地前说出还需检查的两个方向。",
+        "第一局：用一次短暂烟雾服务于明确的移动目标，记录自己是否能在烟雾消失前做出下一步决定。",
+        "第二至三局：和一名队友约好机动后的跟进信号，观察自己是否喜欢承担第一步行动。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/jett/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "kayo",
+      "name": "K/O",
+      "enName": "KAY/O",
+      "role": "initiator",
+      "tagline": "把闪光时机与技能压制交给队伍使用",
+      "description": "闪光可以采用不同投掷方式，压制刃则限制作用范围内敌人的技能使用。适合喜欢先削减对手应对手段、再与队友同步进入的玩家。",
+      "profile": {
+        "initiative": 0.7,
+        "intel": 0.75,
+        "setup": 0.6,
+        "adaptability": 0.7,
+        "teamwork": 0.95
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "用压制影响敌方技能应对",
+        "为不同距离准备闪光方式",
+        "通过简短信号安排同步进入"
+      ],
+      "tradeoff": "压制不等于对方失去交战能力；闪光投掷与队友视线需要协调，发现压制信息后也要及时转为行动。",
+      "tryoutTasks": [
+        "第一局前在训练环境分别试两种闪光投法，确认爆开位置与自己转身时机。",
+        "第一局：在队友准备好时投一次压制刃，把收到的反馈压缩成一句可执行提示。",
+        "第二至三局：约定一次闪光后跟进的简单口令，回合后检查队友是否有足够时间理解。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/kay-o/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "killjoy",
+      "name": "奇乐",
+      "enName": "Killjoy",
+      "role": "sentinel",
+      "tagline": "让炮台和警戒反馈连接后续区域处理",
+      "description": "炮台负责观察一个扇形区域，警报机器人在触发后施加易伤。适合喜欢先组织装置布局，再围绕反馈安排自己与队友行动的玩家。",
+      "profile": {
+        "initiative": 0.2,
+        "intel": 0.75,
+        "setup": 1,
+        "adaptability": 0.4,
+        "teamwork": 0.7
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "用炮台覆盖指定观察角度",
+        "以警报反馈安排区域接触",
+        "通过可重复布局建立判断习惯"
+      ],
+      "tradeoff": "需要关注装置状态以及与自己的位置关系；固定布局若被对手识别，仍要花精力改变观察思路。",
+      "tryoutTasks": [
+        "第一局前在训练环境从炮台位置观察其扇形覆盖，找出一个它没有照看的入口。",
+        "第一局：为警报机器人触发准备一个后续动作，观察自己是否喜欢等待区域反馈。",
+        "第二至三局：转移前检查一次装置状态与自己的位置，回合后记录资源管理是否容易记住。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/killjoy/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "miks",
+      "name": "迷核",
+      "enName": "Miks",
+      "role": "controller",
+      "tagline": "在地图定点烟与队友增益之间调整支援",
+      "description": "地图定点烟承担视线控制，Harmonize 提供自身或与队友共享的战斗增益，M-pulse 可切换震荡或治疗模式。适合随着队伍行动切换支援重点的玩家。",
+      "profile": {
+        "initiative": 0.5,
+        "intel": 0.4,
+        "setup": 0.55,
+        "adaptability": 0.9,
+        "teamwork": 1
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "用地图定点烟安排队伍视线",
+        "围绕一名队友安排共同增益",
+        "按现场需要选择脉冲模式"
+      ],
+      "tradeoff": "需要在烟雾位置、自己交战与队友需求之间切换注意力；脉冲会影响区域内玩家，震荡或治疗的选择也需要让附近队友理解。",
+      "tryoutTasks": [
+        "第一局前在训练环境分别试用 M-pulse 两种模式，确认自己能清楚区分当前模式与落点。",
+        "第一局：和一名队友约一次 Harmonize 后的行动，记录共同增益是否方便融入节奏。",
+        "第二至三局：在队伍准备推进前用地图安排一次定点烟，回合后判断控烟与其他支援任务是否容易兼顾。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/miks/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "neon",
+      "name": "霓虹",
+      "enName": "Neon",
+      "role": "duelist",
+      "tagline": "在快速移动中管理能量与接触终点",
+      "description": "高速移动与滑铲强调动作衔接，弹跳的电能弹则在不同位置形成震荡区域。适合愿意练习移动路径、主动寻找先机的玩家。",
+      "profile": {
+        "initiative": 1,
+        "intel": 0.2,
+        "setup": 0.2,
+        "adaptability": 0.95,
+        "teamwork": 0.55
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 2,
+      "strengths": [
+        "用高速移动改变到达时机",
+        "把滑铲与掩体选择衔接",
+        "利用弹跳震荡影响接触区域"
+      ],
+      "tradeoff": "速度可能让自己先于队友到达危险区域；还要同时留意能量、滑铲终点和震荡是否影响己方。",
+      "tryoutTasks": [
+        "第一局前在训练环境沿一条短路线加速并滑铲到预定掩体，确认结束位置不暴露多面。",
+        "第一局：每次主动加速前先等一名队友准备好，观察快节奏是否还能保留支持。",
+        "第二至三局：选一个自己理解的电能弹弹跳，回合后检查两个震荡位置是否符合预期。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/neon/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "omen",
+      "name": "幽影",
+      "enName": "Omen",
+      "role": "controller",
+      "tagline": "在视线干扰和短距换位之间寻找角度",
+      "description": "穿墙致盲与短距离传送允许改变同一局面的接触方式。适合喜欢先完成团队视线任务，再根据现场变化调整位置的玩家。",
+      "profile": {
+        "initiative": 0.65,
+        "intel": 0.55,
+        "setup": 0.55,
+        "adaptability": 1,
+        "teamwork": 0.7
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "通过短距传送改变接触角度",
+        "用穿墙视线干扰连接队友动作",
+        "在控场任务中保留临场选择"
+      ],
+      "tradeoff": "传送落点需要提前检查，视线干扰也可能影响队友；频繁尝试新角度时仍要记得后续支援任务。",
+      "tryoutTasks": [
+        "第一局前在训练环境选两个可见的传送落点，分别检查落点会暴露在哪些方向。",
+        "第一局：先完成队伍需要的视线控制，再考虑一次位置变化，记录同时管理两件事是否有趣。",
+        "第二至三局：使用穿墙致盲前告诉一名队友方向，回合后判断技能与跟进是否接上。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/omen/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "phoenix",
+      "name": "不死鸟",
+      "enName": "Phoenix",
+      "role": "duelist",
+      "tagline": "用弧线闪光与火墙组织一段直接行动",
+      "description": "弧线闪光可以从转角引出，火墙则改变视线并影响穿越区域。适合喜欢围绕自身行动安排一套简洁技能衔接的玩家。",
+      "profile": {
+        "initiative": 0.85,
+        "intel": 0.2,
+        "setup": 0.25,
+        "adaptability": 0.75,
+        "teamwork": 0.35
+      },
+      "practiceLoad": 1,
+      "communicationLoad": 1,
+      "strengths": [
+        "以弧线闪光启动短距离接触",
+        "用火墙改变需要处理的视线",
+        "围绕一个明确目标衔接技能"
+      ],
+      "tradeoff": "闪光和火墙都需要顾及队友；相对直接的技能顺序不能替代对角度、退路与后续接触的判断。",
+      "tryoutTasks": [
+        "第一局前在训练环境分别向左右释放弧线闪光，确认自己与队友站在哪些位置会受影响。",
+        "第一局：只围绕一个转角安排闪光后的动作，记录是否喜欢由自己启动接触。",
+        "第二至三局：使用火墙前检查队友路线，回合后比较它减少的视线与需要自己补查的角度。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/phoenix/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "raze",
+      "name": "雷兹",
+      "enName": "Raze",
+      "role": "duelist",
+      "tagline": "让爆炸道具与位移一起推动接触",
+      "description": "集束手雷影响区域，爆破包则可破坏局部空间或推动自身位移。适合喜欢练习移动衔接、用道具迫使对手重新选择位置的玩家。",
+      "profile": {
+        "initiative": 0.9,
+        "intel": 0.4,
+        "setup": 0.4,
+        "adaptability": 0.85,
+        "teamwork": 0.55
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 2,
+      "strengths": [
+        "用手雷影响掩体周围区域",
+        "以爆破包尝试不同移动路线",
+        "把局部清理与队友进入衔接"
+      ],
+      "tradeoff": "爆破包位移需要先练熟，手雷与爆炸范围也要顾及队友；同时处理移动、道具与落点可能占用较多注意力。",
+      "tryoutTasks": [
+        "第一局前在训练环境只练一次简单爆破包移动，确认落点后再考虑带入普通对局。",
+        "第一局：每次手雷都先指定一个希望影响的掩体，结束后判断是否帮助自己理解该区域。",
+        "第二至三局：和一名队友约好道具后的跟进，记录位移时是否仍能注意队友与侧面。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/raze/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "reyna",
+      "name": "芮娜",
+      "enName": "Reyna",
+      "role": "duelist",
+      "tagline": "围绕个人接触判断何时恢复、何时再行动",
+      "description": "致盲之眼影响看到它的敌人，灵魂球则提供交战后的恢复机会。适合喜欢直接接触并愿意对自己的交战节奏反复复盘的玩家。",
+      "profile": {
+        "initiative": 0.95,
+        "intel": 0.15,
+        "setup": 0.15,
+        "adaptability": 0.85,
+        "teamwork": 0.2
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 1,
+      "strengths": [
+        "用致盲之眼为个人或队友创造接触",
+        "在获得灵魂球后重新安排节奏",
+        "围绕个人位置判断形成直接反馈"
+      ],
+      "tradeoff": "恢复依赖先获得灵魂球，不能预设每次接触后都有资源；偏个人的技能循环也需要主动记得队伍目标。",
+      "tryoutTasks": [
+        "第一局前在训练环境观察致盲之眼的不同高度，确认敌人需要看向它才会受到视线影响。",
+        "第一局：为一次接触提前选好没有灵魂球时的退路，记录是否仍喜欢这种行动方式。",
+        "第二至三局：如有恢复机会，先观察下一处掩体再决定是否继续接触，比较恢复后的急进与稳住节奏。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/reyna/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "sage",
+      "name": "贤者",
+      "enName": "Sage",
+      "role": "sentinel",
+      "tagline": "用屏障与减速为队伍争取处理时间",
+      "description": "屏障可以改变通道，减速区域则影响穿越节奏。适合喜欢照看行动后续、围绕队友需要安排区域阻挡与支援的玩家。",
+      "profile": {
+        "initiative": 0.3,
+        "intel": 0.35,
+        "setup": 0.75,
+        "adaptability": 0.5,
+        "teamwork": 0.95
+      },
+      "practiceLoad": 1,
+      "communicationLoad": 2,
+      "strengths": [
+        "用可调整方向的屏障改变通路",
+        "以减速区域延缓连续推进",
+        "围绕队伍后续需求安排支援"
+      ],
+      "tradeoff": "屏障和减速也会改变己方路线；照看队友的同时仍需保护自己的位置，不能把支援职责等同于始终留在后方。",
+      "tryoutTasks": [
+        "第一局前在训练环境旋转一次屏障方向，检查自己计划保留的通路是否真的能通过。",
+        "第一局：为减速区域指定一次延缓目的，回合后确认是否给队友留下了需要的处理时间。",
+        "第二至三局：在支援前先确认自己的掩体与队友需求，记录兼顾两者是否符合自己的参与方式。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/sage/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "skye",
+      "name": "斯凯",
+      "enName": "Skye",
+      "role": "initiator",
+      "tagline": "在可控侦察与闪光反馈之间切换支援",
+      "description": "可控制的侦察兽能向前探查并跃击，飞行闪光则提供是否影响敌人的反馈。适合喜欢及时接收线索、经常调整支援方式的玩家。",
+      "profile": {
+        "initiative": 0.65,
+        "intel": 0.9,
+        "setup": 0.4,
+        "adaptability": 0.85,
+        "teamwork": 0.95
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "以可控侦察检查前方路径",
+        "根据闪光反馈调整下一步",
+        "把信息获取与队友跟进连接"
+      ],
+      "tradeoff": "控制侦察工具时需要保护本体，闪光还要兼顾队友视线；信息、位置与支援目标之间的切换可能较频繁。",
+      "tryoutTasks": [
+        "第一局前在训练环境从安全位置控制侦察兽，结束后检查本体周围还有哪些未处理方向。",
+        "第一局：与一名队友约一次侦察后的跟进，并只报一条最有用的路线信息。",
+        "第二至三局：使用飞行闪光前说明方向，回合后比较有无反馈时自己怎样调整计划。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/skye/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "sova",
+      "name": "猎枭",
+      "enName": "Sova",
+      "role": "initiator",
+      "tagline": "把侦察视线和投射落点变成队伍判断",
+      "description": "可控制侦察无人机负责检查和标记，电击箭则要求理解落点与反弹。适合喜欢先提出信息问题，再用准备与观察帮助队伍行动的玩家。",
+      "profile": {
+        "initiative": 0.45,
+        "intel": 1,
+        "setup": 0.8,
+        "adaptability": 0.45,
+        "teamwork": 0.85
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "用可控制侦察检查难以直接进入的路径",
+        "将观察到的目标及时同步",
+        "通过可重复的投射方案建立准备"
+      ],
+      "tradeoff": "控制无人机时本体需要保护；投射准备也需要落点理解，信息若没有及时交给队友便可能错过行动窗口。",
+      "tryoutTasks": [
+        "第一局前在训练环境只练一个自己理解的电击箭落点与反弹，不把记住复杂点位当作试玩前提。",
+        "第一局：从安全位置使用一次无人机，只回答一个明确问题，例如前方哪一段需要继续检查。",
+        "第二至三局：将一次侦察发现压缩成方向与时机两点，回合后判断队友是否能据此调整动作。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/sova/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "tejo",
+      "name": "钛狐",
+      "enName": "Tejo",
+      "role": "initiator",
+      "tagline": "在无人机侦察与定点震荡之间安排推进",
+      "description": "隐形无人机可搜集并影响局部信息，黏附手雷则在目标表面形成震荡。适合喜欢先了解一段区域，再把定点技能与队伍推进排成顺序的玩家。",
+      "profile": {
+        "initiative": 0.6,
+        "intel": 0.8,
+        "setup": 0.85,
+        "adaptability": 0.55,
+        "teamwork": 0.9
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 3,
+      "strengths": [
+        "用无人机更新一个局部区域的判断",
+        "以定点震荡影响队友准备接触的位置",
+        "把技能施放与团队推进分阶段衔接"
+      ],
+      "tradeoff": "无人机控制会暂时占用本体注意力，定点技能也需要队友理解落点与时机；准备完成后仍可能需要重新判断。",
+      "tryoutTasks": [
+        "第一局前在训练环境从安全位置启动无人机，确认侦察结束后自己怎样恢复对本体周围的观察。",
+        "第一局：为一次无人机信息明确下一步选择，记录它是否改变了队伍准备检查的区域。",
+        "第二至三局：与一名队友约好黏附震荡后的动作，回合后判断落点和跟进是否相互支持。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/tejo/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "veto",
+      "name": "禁灭",
+      "enName": "Veto",
+      "role": "sentinel",
+      "tagline": "用后备传送点与干扰装置经营应对空间",
+      "description": "可预置传送旋涡，干扰装置则处理会在碰到角色后弹开、或可被枪火摧毁的特定技能道具。适合喜欢先安排后备位置、再围绕装置范围管理区域的玩家。",
+      "profile": {
+        "initiative": 0.35,
+        "intel": 0.65,
+        "setup": 0.9,
+        "adaptability": 0.75,
+        "teamwork": 0.6
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "用预置旋涡准备后续位置选择",
+        "针对特定来袭道具安排干扰",
+        "把区域准备与临场撤回结合"
+      ],
+      "tradeoff": "旋涡有生效与范围条件，不能当作任意地点的即时退路；干扰装置也不处理所有技能，需要理解它能应对的对象。",
+      "tryoutTasks": [
+        "第一局前在训练环境放置旋涡，测试进入生效范围和回到预设位置的流程，先确认它的条件。",
+        "第一局：为干扰装置指定一个要保护的区域，回合后只记录它是否处理了自己预期的技能道具。",
+        "第二至三局：提前选一个后备落点，并在决定转移时检查队友仍需自己承担什么职责。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/veto/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "viper",
+      "name": "蝰蛇",
+      "enName": "Viper",
+      "role": "controller",
+      "tagline": "让烟雾燃料与区域计划保持同一节奏",
+      "description": "毒云与毒幕依赖燃料管理，并通过预先布置改变重要视线。适合喜欢先经营区域、再持续关注资源开关与队友时机的玩家。",
+      "profile": {
+        "initiative": 0.35,
+        "intel": 0.5,
+        "setup": 1,
+        "adaptability": 0.35,
+        "teamwork": 0.8
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 3,
+      "strengths": [
+        "通过预先布置经营关键视线",
+        "按行动时机管理燃料与开关",
+        "围绕区域计划安排队友后续路线"
+      ],
+      "tradeoff": "预置位置与燃料需要同时关注，烟雾开关也会改变队友面对的视线；想频繁临时转向时可能感到前期承诺较多。",
+      "tryoutTasks": [
+        "第一局前在训练环境放一条自己能解释用途的毒幕，沿两侧走一遍确认视线边界。",
+        "第一局：围绕队友一次行动管理烟雾开启与关闭，并在关闭前给出简短信号。",
+        "第二至三局：只改变一次资源开启时机，回合后判断持续管理燃料是否让自己有参与感或负担。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/viper/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "vyse",
+      "name": "维斯",
+      "enName": "Vyse",
+      "role": "sentinel",
+      "tagline": "让隐藏闪光与触发墙分开处理一个入口",
+      "description": "可部署并重复使用的隐藏闪光，与穿过后才触发的墙体一起改变通路。适合喜欢提前设计一个交战片段、再根据触发决定是否行动的玩家。",
+      "profile": {
+        "initiative": 0.4,
+        "intel": 0.65,
+        "setup": 0.95,
+        "adaptability": 0.55,
+        "teamwork": 0.7
+      },
+      "practiceLoad": 2,
+      "communicationLoad": 2,
+      "strengths": [
+        "用预置闪光准备后续接触",
+        "通过触发墙改变连续进入的顺序",
+        "围绕一个入口组织区域应对"
+      ],
+      "tradeoff": "装置位置需要结合敌人可能经过的路径，触发墙也未必自动带来有利交战；闪光时机仍要兼顾队友视线。",
+      "tryoutTasks": [
+        "第一局前在训练环境把闪光放在墙的近侧与远侧各一次，确认回收和触发方式。",
+        "第一局：为一个入口布置触发墙，回合后记录它触发时自己是否已有安全的后续选择。",
+        "第二至三局：与一名队友约好预置闪光信号，比较提前部署与现场直接使用技能的体验。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/vyse/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "waylay",
+      "name": "幻棱",
+      "enName": "Waylay",
+      "role": "duelist",
+      "tagline": "以机动改变威胁角度，再接上减速窗口",
+      "description": "角色围绕光速机动与回转展开，减速区域会影响对手多种操作节奏。适合愿意练习进入后的路线、并在短暂控制窗口内主动行动的玩家。",
+      "profile": {
+        "initiative": 0.95,
+        "intel": 0.2,
+        "setup": 0.2,
+        "adaptability": 1,
+        "teamwork": 0.5
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 2,
+      "strengths": [
+        "通过机动尝试新的接触角度",
+        "以减速效果影响局部交战节奏",
+        "将进入路线与后续回转一起考虑"
+      ],
+      "tradeoff": "机动与回转需要先在训练环境熟悉，移动后的侧面与队友距离仍要检查；控制命中也不等于可以无条件追进。",
+      "tryoutTasks": [
+        "第一局前在训练环境练一条短机动路线，结束时说清自己的落点与下一处掩体。",
+        "第一局：为一次减速道具选一个明确区域，观察控制后自己是否有安全的后续动作。",
+        "第二至三局：与队友约好一次主动进入时机，回合后比较自己移动速度和队友支援距离是否匹配。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/waylay/",
+      "reviewedAt": "2026-11-11"
+    },
+    {
+      "id": "yoru",
+      "name": "夜露",
+      "enName": "Yoru",
+      "role": "duelist",
+      "tagline": "用反弹闪光与传送信标制造不同进入方式",
+      "description": "反弹闪光需要理解碰撞后的爆开位置，传送信标可以放置、引导或伪装传送。适合喜欢准备多个进入方案、再临场改变角度的玩家。",
+      "profile": {
+        "initiative": 0.85,
+        "intel": 0.45,
+        "setup": 0.75,
+        "adaptability": 1,
+        "teamwork": 0.55
+      },
+      "practiceLoad": 3,
+      "communicationLoad": 2,
+      "strengths": [
+        "以反弹闪光尝试不同接触角度",
+        "用传送信标预备位置变化",
+        "通过真实与伪装行动改变信息"
+      ],
+      "tradeoff": "需要同时记得信标位置、闪光反弹和队友动作；传送或伪装都不能替代落点检查，也不保证对手会按预想反应。",
+      "tryoutTasks": [
+        "第一局前在训练环境试一次反弹闪光，确认弹开后的爆点和自己的安全站位。",
+        "第一局：为传送信标选一个有明确后续任务的位置，使用前再次检查是否值得转移。",
+        "第二至三局：向队友说明一次伪装或真实传送的意图，回合后记录自己是否喜欢管理这类信息变化。"
+      ],
+      "sourceUrl": "https://playvalorant.com/en-us/agents/yoru/",
+      "reviewedAt": "2026-11-11"
+    }
+  ]
+}
