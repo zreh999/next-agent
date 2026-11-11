@@ -1,6 +1,6 @@
 {
   "name": "next-agent",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "本命回响 · Agent Resonance — psychology-inspired VALORANT playstyle exploration",
@@ -9,27 +9,19 @@
     "node": "24.x"
   },
   "scripts": {
-    "predev": "npm run db:generate",
     "dev": "next dev --hostname 127.0.0.1",
-    "build": "npm run db:generate && next build",
-    "start": "next start --hostname 0.0.0.0",
+    "build": "next build && node scripts/check-static.mjs",
+    "start": "node scripts/serve-static.mjs",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "test:compat": "vitest run --config vitest.compat.config.ts --configLoader native",
-    "test:smoke": "node tests/e2e/api-smoke.mjs",
+    "test:smoke": "node scripts/check-static.mjs",
     "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
-    "db:deploy": "prisma migrate deploy"
+    "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "7.10.1",
-    "@prisma/client": "7.10.1",
-    "dotenv": "18.0.10",
     "lucide-react": "1.71.0",
     "next": "16.4.6",
-    "pg": "8.23.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "recharts": "3.10.1",
@@ -38,10 +30,8 @@
   "devDependencies": {
     "@playwright/test": "1.65.0",
     "@types/node": "26.6.6",
-    "@types/pg": "8.23.1",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "prisma": "7.10.1",
     "typescript": "7.0.2",
     "vitest": "5.1.0"
   }

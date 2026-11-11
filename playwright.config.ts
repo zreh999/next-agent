@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const baseURL = "http://127.0.0.1:3100";
+const port = Number(process.env.STATIC_PORT ?? "3100");
+const baseURL = `http://127.0.0.1:${port}/next-agent/`;
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -19,15 +20,9 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
-    command: "npm run dev -- --port 3100",
-    url: `${baseURL}/api/health`,
-    reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
-    env: {
-      DATABASE_URL: "",
-      ALLOW_FILE_STORAGE: "true",
-      NEXT_AGENT_DATA_DIR: ".data/e2e",
-      NEXT_TELEMETRY_DISABLED: "1",
-    },
+    command: `node scripts/serve-static.mjs --port ${port}`,
+    url: baseURL,
+    reuseExistingServer: false,
+    timeout: 30_000,
   },
 });

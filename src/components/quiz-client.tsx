@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Check, RotateCcw, LockKeyhole, Sparkles } from "
 import type { AgentProfile, AssessmentInput, Preferences, Questionnaire } from "@/lib/domain";
 import { roleLabels } from "@/lib/domain";
 import { preferencesSchema } from "@/lib/validation";
+import { createLocalAssessment, getLocalAssessment } from "@/lib/browser-storage";
 
 const DRAFT_KEY = "next-agent-draft-v1";
 const defaults: Preferences = { experience: "new", practice: "balanced", communication: "flexible", excludedAgentIds: [] };
@@ -28,10 +29,9 @@ export function QuizClient({ questionnaire, agents }: { questionnaire: Questionn
       try {
         const edit = new URLSearchParams(window.location.search).get("edit");
         if (edit) {
-          const response = await fetch(`/api/assessments/${encodeURIComponent(edit)}`);
-          const data = await response.json();
-          if (!response.ok) throw new Error(data.error);
-          const input = data.input as AssessmentInput;
+          const record = getLocalAssessment(edit);
+          if (!record) throw new Error("此浏览器中没有原报告，请重新探索。");
+          const input = record.input;
           if (input.questionnaireVersion !== questionnaire.version) throw new Error("原报告题库已更新，请重新探索。");
           if (!cancelled) { setPreferences(preferencesSchema.parse(input.preferences)); setAnswers(Object.fromEntries(input.answers.map(a => [a.questionId,a.optionId]))); setDraftNote("已载入原报告的回答。修改后会创建新报告，旧报告保持不变。"); }
         } else {
@@ -58,18 +58,17 @@ export function QuizClient({ questionnaire, agents }: { questionnaire: Questionn
     setBusy(true); setError("");
     try {
       const input: AssessmentInput = { questionnaireVersion: questionnaire.version, preferences, answers: questionnaire.questions.map(q => ({ questionId:q.id, optionId:answers[q.id] })) };
-      const response = await fetch("/api/assessments", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(input) });
-      const data = await response.json(); if (!response.ok) throw new Error(data.error ?? "保存失败，请重试。");
-      try { localStorage.removeItem(DRAFT_KEY); localStorage.setItem("next-agent-last-result", data.id); } catch { /* storage is optional */ }
-      router.push(`/results/${data.id}`);
-    } catch (e) { setError(e instanceof Error ? e.message : "连接暂时中断，请再试一次。"); setBusy(false); }
+      const record = createLocalAssessment(input);
+      try { localStorage.removeItem(DRAFT_KEY); } catch { /* The report is already persisted. */ }
+      router.push(`/results/?id=${encodeURIComponent(record.id)}`);
+    } catch (e) { setError(e instanceof Error ? e.message : "未能保存到此浏览器，请重试。"); setBusy(false); }
   }
   if (!ready) return <div className="page-loading" role="status"><span className="loading-orbit"/><p>正在准备你的探索…</p></div>;
   if (step < 0) return <div className="section-shell setup-page"><div className="page-intro"><div className="eyebrow">BEFORE THE FIRST ROUND</div><h1>先选一个，<span className="text-accent">舒服的起点。</span></h1><p>我们会把你的意愿放进推荐里。没有更好的选项，只有更适合现在的你。</p></div>
     {draftNote && <div className="notice"><span>{draftNote}</span>{answered>0&&<button className="text-link" onClick={()=>{setAnswers({});setDraftNote("");setPreferences(defaults);}}><RotateCcw size={13}/> 清除草稿</button>}</div>}
     {settings.map((setting,index)=><fieldset className="setting-section" key={setting.key}><legend><span className="setting-number">0{index+1}</span>{setting.title}</legend><p>{setting.hint}</p><div className="setting-grid">{setting.options.map(o=><button type="button" key={o.id} className={`setting-option ${preferences[setting.key]===o.id?"selected":""}`} aria-pressed={preferences[setting.key]===o.id} onClick={()=>setPreferences(p=>({...p,[setting.key]:o.id}))}><span>{o.name}{preferences[setting.key]===o.id&&<Check size={15}/>}</span><small>{o.description}</small></button>)}</div></fieldset>)}
     <details className="exclude-details"><summary>有不想被推荐的特工？<span>可选</span></summary><div className="exclude-grid">{agents.map(a=><label key={a.id}><input type="checkbox" checked={preferences.excludedAgentIds.includes(a.id)} onChange={e=>setPreferences(p=>({...p,excludedAgentIds:e.target.checked?[...p.excludedAgentIds,a.id]:p.excludedAgentIds.filter(id=>id!==a.id)}))}/>{a.name}<small>{roleLabels[a.role]}</small></label>)}</div></details>
-    <div className="setup-bottom"><span><LockKeyhole size={14}/> 草稿保存在此浏览器</span><button className="button button-primary" onClick={()=>{const missing=questionnaire.questions.findIndex(q=>!answers[q.id]);move(missing<0?0:missing);}}>进入情境 <ArrowRight size={18}/></button></div>
+    <div className="setup-bottom"><span><LockKeyhole size={14}/> 答案、报告和反馈仅保存在此浏览器，不上传服务器</span><button className="button button-primary" onClick={()=>{const missing=questionnaire.questions.findIndex(q=>!answers[q.id]);move(missing<0?0:missing);}}>进入情境 <ArrowRight size={18}/></button></div>
   </div>;
   return <div className="quiz-shell section-shell"><div className="quiz-top"><button className="text-link" onClick={()=>move(step-1)} disabled={busy}><ArrowLeft size={16}/>{step===0?"基础偏好":"上一题"}</button><span className="mono small-text">QUESTION {String(step+1).padStart(2,"0")} <span className="text-muted">/ {questionnaire.questions.length}</span></span></div><div className="quiz-progress" role="progressbar" aria-label="答题进度" aria-valuenow={step+1} aria-valuemin={0} aria-valuemax={questionnaire.questions.length}><span style={{width:`${(step+1)/questionnaire.questions.length*100}%`}}/></div>
     <div className="question-stage" key={current.id}><span className="eyebrow">这一幕里，哪种选择更像你？</span>{current.context&&<p className="question-context">{current.context}</p>}<h1>{current.prompt}</h1><div className="answer-list">{current.options.map((o,i)=><button type="button" className={`answer-option ${answers[current.id]===o.id?"selected":""}`} aria-pressed={answers[current.id]===o.id} key={o.id} disabled={busy} onClick={()=>setAnswers(a=>({...a,[current.id]:o.id}))}><span className="answer-letter">{"ABCD"[i]??i+1}</span><span>{o.label}</span><span className="answer-check">{answers[current.id]===o.id&&<Check size={17}/>}</span></button>)}</div></div>

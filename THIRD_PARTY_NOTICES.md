@@ -20,9 +20,9 @@ VALORANT、无畏契约、Riot Games、特工名称、技能及其他相关游�
 
 ## 软件依赖
 
-项目使用 Next.js、React、Recharts、Prisma、Zod、Vitest、Playwright 等第三方软件。依赖的具体版本由锁文件记录；各依赖仍受其自身许可证、版权声明及分发条件约束。请保留安装包附带的 LICENSE 与 NOTICE；本文件不替代各软件自己的声明。
+项目使用 Next.js、React、Recharts、lucide-react、Zod、Vitest、Playwright 等第三方软件。依赖的具体版本由锁文件记录；各依赖仍受其自身许可证、版权声明及分发条件约束。请保留安装包附带的 LICENSE 与 NOTICE；本文件不替代各软件自己的声明。
 
-PostgreSQL 作为可选的数据库服务独立运行，其许可证与发行版声明也应予以保留。
+本静态版本不包含数据库服务；旧服务端实现仅保留在 Git 历史中。
 
 ## 后续新增内容
 

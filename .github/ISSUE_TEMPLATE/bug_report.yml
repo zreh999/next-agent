@@ -1,10 +1,10 @@
 name: 问题反馈
-description: 报告可复现的页面、接口、保存或分享问题
+description: 报告可复现的页面、本机保存或图片下载问题
 title: "[Bug] "
 body:
   - type: markdown
     attributes:
-      value: 请使用示例数据复现，不要提交会话 Cookie、环境变量或真实用户的私有报告。
+      value: 请使用示例数据复现，不要提交真实用户的本机记录、密码或其他私密信息。
   - type: input
     id: version
     attributes:
@@ -29,7 +29,7 @@ body:
     id: environment
     attributes:
       label: 环境
-      description: 浏览器、设备，以及本地演示或 PostgreSQL 部署。
+      description: 浏览器、设备，以及 GitHub Pages 网站或本地静态预览。
   - type: textarea
     id: details
     attributes:
