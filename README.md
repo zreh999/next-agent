@@ -8,6 +8,12 @@
 
 在线体验：[本命回响 · Agent Resonance](https://zreh999.github.io/next-agent/)。已于 2026-11-11 完成 GitHub Pages 发布；发布者确认任务成功且公网首页正常打开。检查范围见 [验证记录](docs/verification.md)。
 
+## 0.4：更像打瓦时会说的话
+
+16 道题已改为购买阶段、进点、转点、双排和热身等具体场景。选项更短，开题前提供常见术语解释；不把枪法、段位或是否会开麦当人格判断。题库版本升为 `3.0.0`，计分表和角色推荐规则不变，旧报告仍保留原快照。社区阅读样本、心理学一手资料和逐题设计见 [题目改写研究](docs/question-design.md)。
+
+结果页新增 1080 × 1440 艺术海报：首推立绘、候选副卡、角色主题色、五维刻度和经典短台词。30 名角色均有立绘映射和核对过的英文短句，中文为项目译意。外部图片不可用时仍可下载几何版本，并明确提示。当前采用图片与文字，不提供语音播放。来源与权利说明见 [媒体资料](docs/media-sources.md)。
+
 ## 项目封面与界面
 
 ![本命回响项目封面](docs/images/cover.svg)
@@ -82,7 +88,7 @@ Windows 限制子进程时，可用 `npm run test:compat` 运行相同单元测�
 
 项目使用 Next.js App Router 静态导出、React、Recharts、Zod、Vitest 和 Playwright。推荐采用版本化的加权 L1 距离规则，比较问答形成的偏好与特工玩法画像。匹配分只用于当前规则内的比较，不是适合该特工的概率，也不代表测量精度。
 
-当前题库与角色库均为 `2.0.0`，算法规则另行版本化。报告保存生成时的三个内容版本及快照，更新不会自动改写旧结果。题目虽然参考心理学概念组织情境，但没有直接采用正式量表，也没有建立常模或信效度证据。详见 [方法说明](docs/methodology.md)、[问卷设计依据](docs/question-design.md)和 [内容维护指南](docs/content-guide.md)。
+当前题库为 `3.0.0`、角色库为 `2.0.0`，算法规则另行版本化。报告保存生成时的三个内容版本及快照，更新不会自动改写旧结果。题目虽然参考心理学概念组织情境，但没有直接采用正式量表，也没有建立常模或信效度证据。详见 [方法说明](docs/methodology.md)、[问卷设计依据](docs/question-design.md)和 [内容维护指南](docs/content-guide.md)。
 
 ## 参与开源
 
@@ -92,6 +98,6 @@ Windows 限制子进程时，可用 `npm run test:compat` 运行相同单元测�
 
 本项目原创代码和原创题目采用 [MIT 许可证](LICENSE)。依赖及第三方权利说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-本项目是非官方玩家工具，未获 Riot Games 背书或赞助。VALORANT、无畏契约、Riot Games、特工名称及相关游戏内容的权利属于各自权利人；本项目的 MIT 许可证不授予这些第三方权利。本版使用原创几何图形和文本，没有内置 Riot 角色图片。
+本项目是非官方玩家工具，未获 Riot Games 背书或赞助。VALORANT、无畏契约、Riot Games、特工名称及相关游戏内容的权利属于各自权利人；本项目的 MIT 许可证不授予这些第三方权利。本版保留原创几何标识，并在分享海报中使用注明社区托管来源的 Riot 角色立绘和短台词；不接入语音。
 
 公开上线前，请核对 [Riot VALORANT 开发者政策](https://developer.riotgames.com/docs/valorant)及其适用要求。本仓库不表示项目已获 Riot 注册确认或批准。

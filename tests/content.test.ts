@@ -16,7 +16,7 @@ const canonicalAgentSlug = (slug: string) => slug.toLowerCase().replace(/-/g, ""
 describe("published content audit", () => {
   it("loads the complete versioned launch catalog through the production validator", () => {
     expect(validateContent()).toBe(true);
-    expect(questionnaire.version).toBe("2.0.0");
+    expect(questionnaire.version).toBe("3.0.0");
     expect(catalog.version).toBe("2.0.0");
     expect(questionnaire.questions).toHaveLength(16);
     expect(questionnaire.questions.flatMap((question) => question.options)).toHaveLength(64);

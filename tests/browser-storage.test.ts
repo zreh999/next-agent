@@ -148,10 +148,13 @@ describe("browser-only reports and feedback", () => {
     const record = store.createAssessment(input());
     const key = [...storage.values.keys()].find(item => item.includes(":assessment:"))!;
     const snapshot = JSON.parse(storage.values.get(key)!);
+    snapshot.input.questionnaireVersion = "2.0.0";
+    snapshot.report.result.versions.questionnaire = "2.0.0";
     snapshot.report.result.versions.ruleset = "previous-rule-snapshot";
     snapshot.report.result.recommendations[0].tradeoff = "保存当时的取舍说明";
     storage.values.set(key, JSON.stringify(snapshot));
     expect(reopen().getAssessment(record.id)?.report.result.versions.ruleset).toBe("previous-rule-snapshot");
+    expect(reopen().getAssessment(record.id)?.input.questionnaireVersion).toBe("2.0.0");
     expect(reopen().getAssessment(record.id)?.report.result.recommendations[0].tradeoff).toBe("保存当时的取舍说明");
   });
 });

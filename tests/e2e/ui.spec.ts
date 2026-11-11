@@ -34,8 +34,8 @@ test("mobile player can answer, refresh, download and save local tryout feedback
   expect(path).not.toBeNull();
   const png = await readFile(path!);
   expect(png.subarray(0, 8).toString("hex")).toBe("89504e470d0a1a0a");
-  expect(png.readUInt32BE(16)).toBeGreaterThan(0);
-  expect(png.readUInt32BE(20)).toBeGreaterThan(0);
+  expect(png.readUInt32BE(16)).toBe(1080);
+  expect(png.readUInt32BE(20)).toBe(1440);
 
   await page.getByRole("link", { name: "带着任务去试玩" }).click();
   await expect(page).toHaveURL(new RegExp(`/next-agent/tryout/\\?id=${id}$`));

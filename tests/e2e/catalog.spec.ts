@@ -25,7 +25,7 @@ test("full roster can be browsed and filtered on a small screen", async ({ page 
 test("a new questionnaire does not reuse an old version's draft", async ({ page }) => {
   await page.goto("./");
   await page.evaluate(() => localStorage.setItem("next-agent-draft-v1", JSON.stringify({
-    version: "1.0.0", answers: { q01: "a", q02: "b" },
+    version: "2.0.0", answers: { q01: "a", q02: "b" },
     preferences: { experience: "experienced", practice: "dedicated", communication: "active", excludedAgentIds: [] },
   })));
   await page.goto("quiz/");

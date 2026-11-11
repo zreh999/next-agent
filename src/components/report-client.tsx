@@ -7,6 +7,7 @@ import { AgentGlyph } from "./agent-glyph";
 import { ProfileCharts } from "./profile-charts";
 import { kindLabels, roleLabels, type ReportSnapshot } from "@/lib/domain";
 import { downloadCard } from "@/lib/download-card";
+import { ArtShareCard } from "./art-share-card";
 import { getLatestAssessmentId, getLocalAssessment } from "@/lib/browser-storage";
 
 export function ReportClient() {
@@ -27,7 +28,7 @@ export function ReportClient() {
   async function exportCard(){
     if(!report)return;
     setBusy(true);setError("");setNotice("");
-    try{await downloadCard(report);setNotice("分享卡已生成。你可以把图片发送给队友，报告和试玩记录仍保存在此浏览器。");}
+    try{const result=await downloadCard(report);setNotice((result.artworkIncluded?"立绘海报已生成。":"艺术海报已生成。")+result.warnings.join(" ")+" 你可以把图片发送给队友，报告和试玩记录仍保存在此浏览器。");}
     catch(e){setError(e instanceof Error?e.message:"图片暂时无法下载，请重试。");}
     finally{setBusy(false);}
   }
@@ -38,7 +39,9 @@ export function ReportClient() {
     {error&&<p className="error-message" role="alert">{error}</p>}<div className="recommendation-grid">{report.result.recommendations.map((rec,index)=>{const a=report.agents.find(item=>item.id===rec.agentId);if(!a)return null;return <article className={`recommendation-card ${index===0?"recommendation-best":""}`} key={a.id}><div className="recommendation-card-top"><span>{kindLabels[rec.kind]}</span><span className="mono">0{index+1}</span></div><AgentGlyph id={a.id} role={a.role} name={a.name} large/><div className="recommendation-body"><span className="role-label">{roleLabels[a.role]}</span><h2>{a.name}<small>{a.enName}</small></h2><p className="agent-tagline">{a.tagline}</p><div className="why-heading"><Check size={14}/> 为什么值得一试</div><ul className="reason-list">{rec.reasons.map((reason,i)=><li key={i}>{reason.text}</li>)}</ul><div className="tradeoff"><span>也许需要适应</span><p>{rec.tradeoff}</p></div><details className="agent-details"><summary>技能风格与三局任务</summary><p>{a.description}</p><ol>{a.tryoutTasks.map(task=><li key={task}>{task}</li>)}</ol><a href={a.sourceUrl} target="_blank" rel="noreferrer" className="text-link">官方角色资料 <ArrowUpRight size={13}/></a></details></div></article>;})}</div>
     {report.result.recommendations.length<3&&<p className="notice">符合当前条件的候选不足三种，我们保留了有依据的推荐。你可以调整练习或沟通意愿再看看。</p>}
     <ProfileCharts key={id} report={report}/>
-    <section className="share-panel"><div><div className="eyebrow">A CONVERSATION STARTER</div><h2>把你的下一位，分享给队友。</h2><p>下载候选与偏好图片，再由你决定分享给谁。图片不包含逐题答案或试玩反馈；当前报告网址仅供此浏览器打开，不是公开分享链接。</p></div><div className="share-controls"><button className="button button-primary" disabled={busy} onClick={()=>void exportCard()}><Download size={16}/>{busy?"正在生成图片…":"下载分享卡"}</button></div>{notice&&<p className="share-notice" role="status">{notice}</p>}</section>
+    <ArtShareCard key={id} report={report} onDownload={()=>void exportCard()} busy={busy}/>
+    {notice&&<p className="notice" role="status">{notice}</p>}
+    <p className="chart-note">分享卡不包含逐题答案或试玩反馈。报告网址仅供此浏览器打开；把下载的图片发给朋友即可分享。</p>
     <div className="report-footnote"><p>这份报告生成时比较了 {report.result.coverageCount} 名候选特工。画像数值由维护者根据玩法设计，不代表官方评级或心理学结论。</p><Link href="/method" className="text-link">查看题目设计、版本与局限 <ArrowUpRight size={14}/></Link><span className="mono tiny-label">Q {report.result.versions.questionnaire} / R {report.result.versions.ruleset} / A {report.result.versions.agents}</span></div>
   </div>;
 }

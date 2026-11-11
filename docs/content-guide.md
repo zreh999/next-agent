@@ -8,7 +8,7 @@
 
 ## 文件职责
 
-- `content/questionnaire.json`：题库 `2.0.0`，五个偏好维度、16 道原创情境题，每题四个选项，共64个选项。
+- `content/questionnaire.json`：题库 `3.0.0`，五个偏好维度、16 道原创情境题，每题四个选项，共64个选项。
 - `content/agents.json`：角色库 `2.0.0`，30 名特工的五维画像、负担判断、取舍与试玩任务。四个职业都有覆盖，不要求各职业数量相等。
 - `content/ruleset.json`：维度权重、负担罚项和候选选择容差；这些是独立版本化的维护者设计值。
 - [`question-design.md`](question-design.md)：情境构造、概念参考与计分解释；不能用它替代心理测量验证。

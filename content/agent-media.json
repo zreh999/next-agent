@@ -1,0 +1,367 @@
+{
+  "version": "1.0.0",
+  "reviewedAt": "2026-11-11",
+  "sourceUrl": "https://valorant-api.com/v1/agents?isPlayableCharacter=true",
+  "agents": [
+    {
+      "id": "astra",
+      "portraitUrl": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/fullportrait.png",
+      "accent": "#26146c",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/astra/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "I am on a higher plane, chale, literally!",
+        "translation": "朋友，我真在更高的维度。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Astra/Quotes"
+      }
+    },
+    {
+      "id": "breach",
+      "portraitUrl": "https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/fullportrait.png",
+      "accent": "#81331a",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/breach/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Stand in my way. I dare you.",
+        "translation": "挡我路试试，算你有胆。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Breach/Quotes"
+      }
+    },
+    {
+      "id": "brimstone",
+      "portraitUrl": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/fullportrait.png",
+      "accent": "#363c4f",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/brimstone/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Open up the sky!",
+        "translation": "让天火落下！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Brimstone/Quotes"
+      }
+    },
+    {
+      "id": "chamber",
+      "portraitUrl": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/fullportrait.png",
+      "accent": "#20435b",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/chamber/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "You want to play? Let's play.",
+        "translation": "想玩？那就奉陪。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Chamber/Quotes"
+      }
+    },
+    {
+      "id": "clove",
+      "portraitUrl": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/fullportrait.png",
+      "accent": "#4b1d80",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/clove/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "I've got all the time in the world.",
+        "translation": "时间嘛，我多的是。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Clove/Quotes"
+      }
+    },
+    {
+      "id": "cypher",
+      "portraitUrl": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/fullportrait.png",
+      "accent": "#2f5078",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/cypher/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "I know exactly where you are!",
+        "translation": "你在哪，我一清二楚。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Cypher/Quotes"
+      }
+    },
+    {
+      "id": "deadlock",
+      "portraitUrl": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/fullportrait.png",
+      "accent": "#425495",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/deadlock/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "My territory, my rules!",
+        "translation": "我的地盘，我定规矩！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Deadlock/Quotes"
+      }
+    },
+    {
+      "id": "fade",
+      "portraitUrl": "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/fullportrait.png",
+      "accent": "#1d2846",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/fade/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Face your fear!",
+        "translation": "直面你的恐惧！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Fade/Quotes"
+      }
+    },
+    {
+      "id": "gekko",
+      "portraitUrl": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png",
+      "accent": "#371c5c",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/gekko/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Go get 'em, buddy!",
+        "translation": "去吧，伙计！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Gekko/Quotes"
+      }
+    },
+    {
+      "id": "harbor",
+      "portraitUrl": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/fullportrait.png",
+      "accent": "#275146",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/harbor/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Let's turn the tide!",
+        "translation": "来，把局势翻过来！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Harbor/Quotes"
+      }
+    },
+    {
+      "id": "hush",
+      "portraitUrl": "https://media.valorant-api.com/agents/ddd5a15c-4fbe-42fa-3789-11a55ca5ee04/fullportrait.png",
+      "accent": "#3d2c44",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/hush/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "All it takes is a little nudge.",
+        "translation": "轻轻一推，就够了。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Hush/Quotes"
+      }
+    },
+    {
+      "id": "iso",
+      "portraitUrl": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/fullportrait.png",
+      "accent": "#30336e",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/iso/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Enough training, it's time.",
+        "translation": "练够了，该上场了。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Iso/Quotes"
+      }
+    },
+    {
+      "id": "jett",
+      "portraitUrl": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png",
+      "accent": "#25607a",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/jett/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Watch this!",
+        "translation": "看我这波！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Jett/Quotes"
+      }
+    },
+    {
+      "id": "kayo",
+      "portraitUrl": "https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/fullportrait.png",
+      "accent": "#1c2a69",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/kay-o/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "No one walks away!",
+        "translation": "一个也别想走！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/KAYO/Quotes"
+      }
+    },
+    {
+      "id": "killjoy",
+      "portraitUrl": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png",
+      "accent": "#522162",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/killjoy/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Relax. I've already thought of everything.",
+        "translation": "放轻松，我早都想好了。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Killjoy/Quotes"
+      }
+    },
+    {
+      "id": "miks",
+      "portraitUrl": "https://media.valorant-api.com/agents/7c8a4701-4de6-9355-b254-e09bc2a34b72/fullportrait.png",
+      "accent": "#462b75",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/miks/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Let's make some noise!",
+        "translation": "来，把动静闹起来！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Miks/Quotes"
+      }
+    },
+    {
+      "id": "neon",
+      "portraitUrl": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/fullportrait.png",
+      "accent": "#413476",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/neon/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Move, or get zapped.",
+        "translation": "让路，不然就挨电。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Neon/Quotes"
+      }
+    },
+    {
+      "id": "omen",
+      "portraitUrl": "https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png",
+      "accent": "#433178",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/omen/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "I am the beginning. I am the end.",
+        "translation": "我即开端，亦是终点。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Omen/Quotes"
+      }
+    },
+    {
+      "id": "phoenix",
+      "portraitUrl": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/fullportrait.png",
+      "accent": "#74321c",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/phoenix/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Just take a seat, I got this.",
+        "translation": "坐稳了，这局交给我。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Phoenix/Quotes"
+      }
+    },
+    {
+      "id": "raze",
+      "portraitUrl": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/fullportrait.png",
+      "accent": "#742e1e",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/raze/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Here comes the party!",
+        "translation": "派对开场啦！",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Raze/Quotes"
+      }
+    },
+    {
+      "id": "reyna",
+      "portraitUrl": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportrait.png",
+      "accent": "#662d62",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/reyna/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "They have no idea how heartless I am.",
+        "translation": "他们还不知道，我有多无情。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Reyna/Quotes"
+      }
+    },
+    {
+      "id": "sage",
+      "portraitUrl": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/fullportrait.png",
+      "accent": "#1f5148",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/sage/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "I am both shield and sword.",
+        "translation": "既作坚盾，也作利剑。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Sage/Quotes"
+      }
+    },
+    {
+      "id": "skye",
+      "portraitUrl": "https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/fullportrait.png",
+      "accent": "#436a51",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/skye/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Alright! Where's the fight?",
+        "translation": "行，哪边开打？",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Skye/Quotes"
+      }
+    },
+    {
+      "id": "sova",
+      "portraitUrl": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/fullportrait.png",
+      "accent": "#355285",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/sova/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Wherever they run, I will find them.",
+        "translation": "逃到哪儿，我都找得到。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Sova/Quotes"
+      }
+    },
+    {
+      "id": "tejo",
+      "portraitUrl": "https://media.valorant-api.com/agents/b444168c-4e35-8076-db47-ef9bf368f384/fullportrait.png",
+      "accent": "#80451b",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/tejo/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "New weapons, same war.",
+        "translation": "换了新武器，还是这场仗。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Tejo/Quotes"
+      }
+    },
+    {
+      "id": "veto",
+      "portraitUrl": "https://media.valorant-api.com/agents/92eeef5d-43b5-1d4a-8d03-b3927a09034b/fullportrait.png",
+      "accent": "#1a5d65",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/veto/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "Give them nothing.",
+        "translation": "一点机会也别留给他们。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Veto/Quotes"
+      }
+    },
+    {
+      "id": "viper",
+      "portraitUrl": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/fullportrait.png",
+      "accent": "#1a5f46",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/viper/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "No one can hold their breath forever.",
+        "translation": "没人能永远屏住呼吸。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Viper/Quotes"
+      }
+    },
+    {
+      "id": "vyse",
+      "portraitUrl": "https://media.valorant-api.com/agents/efba5359-4016-a1e5-7626-b1ae76895940/fullportrait.png",
+      "accent": "#492280",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/vyse/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "All paths end with me.",
+        "translation": "所有路，最后都到我这。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Vyse/Quotes"
+      }
+    },
+    {
+      "id": "waylay",
+      "portraitUrl": "https://media.valorant-api.com/agents/df1cb487-4902-002e-5c17-d28e83e78588/fullportrait.png",
+      "accent": "#482e61",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/waylay/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "I don't try, I do.",
+        "translation": "我不说试试，我直接做到。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Waylay/Quotes"
+      }
+    },
+    {
+      "id": "yoru",
+      "portraitUrl": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/fullportrait.png",
+      "accent": "#222b67",
+      "sourceUrl": "https://playvalorant.com/en-us/agents/yoru/",
+      "artworkCredit": "角色立绘 © Riot Games；由社区 VALORANT-API 托管，非 Riot 官方 API。",
+      "quote": {
+        "text": "I'll fight anybody. I'll fight everybody.",
+        "translation": "谁来都行，来多少都行。",
+        "sourceUrl": "https://wiki.playvalorant.com/en-us/Yoru/Quotes"
+      }
+    }
+  ]
+}
