@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import catalog from "../../content/agents.json";
+import catalog from "../../content/agents.json" with { type: "json" };
 import { questionnaire, expectNoHorizontalOverflow } from "./helpers";
 
 test("full roster can be browsed and filtered on a small screen", async ({ page }) => {

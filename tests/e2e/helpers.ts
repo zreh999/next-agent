@@ -1,5 +1,5 @@
 import { expect, type Page } from "@playwright/test";
-import questionnaire from "../../content/questionnaire.json";
+import questionnaire from "../../content/questionnaire.json" with { type: "json" };
 
 export { questionnaire };
 
