@@ -51,6 +51,8 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
+GitHub Actions 使用预装浏览器与系统库的 Playwright 官方容器，不在发布时执行 Ubuntu 软件源安装。升级 `@playwright/test` 时，同时更新 `.github/workflows/pages.yml` 和 `ci.yml` 中的容器版本，使二者一致。
+
 测试应检查实际行为，例如输入校验、边界条件、排序与解释一致性、版本复现、本机保存、浏览器隔离、图片下载和项目子路径。单纯复述实现的断言不能替代这些检查。仅修改文字或文档时，核对链接、命令和描述与实现是否一致即可。
 
 ## Pull Request
